@@ -676,7 +676,6 @@ body {
 /* Появление */
 .fade-in.visible {
   opacity: 1;
-  transform: scale(1);
 }
 
 /* Задержки */
