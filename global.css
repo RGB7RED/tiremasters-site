@@ -927,4 +927,23 @@ body {
   padding: 0 15px;
 }
 
+/* Стили для двухколоночного расположения */
+#orderForm textarea,
+#orderForm button,
+#formStatus {
+  grid-column: span 2;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 600px) {
+  #orderForm {
+    grid-template-columns: 1fr;
+  }
+
+  #orderForm textarea,
+  #orderForm button,
+  #formStatus {
+    grid-column: span 1;
+  }
+}
 
