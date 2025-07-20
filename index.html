@@ -470,6 +470,45 @@
   });
 </script>
 
+<script>
+  document.getElementById('orderForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const comment = document.getElementById('comment').value.trim();
+    const statusEl = document.getElementById('formStatus');
+
+    if (!phone) {
+      statusEl.textContent = 'Пожалуйста, введите телефон';
+      return;
+    }
+
+    const token = 'ВАШ_ТОКЕН'; // ← сюда вставьте токен бота
+    const chat_id = 'ВАШ_CHAT_ID'; // ← сюда вставьте chat_id
+    const message = `📥 Новая заявка с сайта TireMasters:\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n💬 Комментарий: ${comment || '—'}`;
+
+    fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: chat_id,
+        text: message,
+        parse_mode: 'HTML'
+      })
+    })
+    .then(res => res.ok ? res.json() : Promise.reject(res))
+    .then(() => {
+      statusEl.style.color = 'green';
+      statusEl.textContent = '✅ Заявка отправлена!';
+      document.getElementById('orderForm').reset();
+    })
+    .catch(() => {
+      statusEl.style.color = 'red';
+      statusEl.textContent = '❌ Ошибка отправки. Попробуйте позже.';
+    });
+  });
+</script>
 
 </body>
 </html>
