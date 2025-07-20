@@ -850,4 +850,47 @@ body {
     padding: 14px 20px;
     white-space: normal;
   }
+  .geo-service {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin: 60px auto;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.geo-service h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #e30613;
+}
+
+.geo-service p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.geo-service ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.geo-service li {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #ccc;
+  position: relative;
+  padding-left: 20px;
+}
+
+.geo-service li::before {
+  content: "📍";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 }
