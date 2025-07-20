@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://tiremasters.ru/sitemap.xml
+Sitemap: https://rgb7red.github.io/tiremasters-site/sitemap.xml
+
