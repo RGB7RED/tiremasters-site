@@ -957,3 +957,16 @@ body {
   color: #fff;
 }
 
+@media (max-width: 768px) {
+  .about-card {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .about-card .btn-primary {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
