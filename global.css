@@ -838,19 +838,10 @@ body {
     scroll-snap-align: center;
   }
 }
-@media (max-width: 768px) {
-  .hero-btn,
-  .btn-primary {
-    width: 90%;
-    max-width: 320px;
-    margin: 20px auto;
-    display: block;
-    text-align: center;
-    font-size: 18px;
-    padding: 14px 20px;
-    white-space: normal;
-  }
-  .geo-service {
+
+}
+
+.geo-service {
   background-color: #333;
   color: #fff;
   padding: 40px 20px;
@@ -891,6 +882,4 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-}
-
 }
