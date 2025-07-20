@@ -946,4 +946,11 @@ body {
     grid-column: span 1;
   }
 }
+/* === Блок обратной связи (форма заказа) === */
+#order {
+  background-color: #e0e0e0; /* светло-серый фон */
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin: 60px auto;
+}
 
