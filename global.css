@@ -776,3 +776,49 @@ body {
     padding: 16px;
   }
 }
+@media (max-width: 768px) {
+
+  /* Горизонтальная прокрутка hero-блоков */
+  .hero-gallery-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .hero-scroll-row {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .hero-scroll-row > * {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    width: 80%;
+    max-width: 300px;
+  }
+
+  /* Центрированный блок */
+  .hero-center {
+    margin: 0 auto;
+    max-width: 300px;
+  }
+
+  /* Прокрутка остальных блоков фото */
+  .photo-block {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .photo-block img {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    width: 80%;
+    max-width: 300px;
+  }
+}
