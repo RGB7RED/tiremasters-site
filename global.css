@@ -889,8 +889,6 @@ body {
   justify-content: center;
   align-items: start;
   padding: 0 10px;
-  max-width: 700px;
-  margin: 0 auto;
 }
 
 #orderForm input,
@@ -923,3 +921,10 @@ body {
 #orderForm button:hover {
   background-color: #b80000;
 }
+.form-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
