@@ -881,3 +881,24 @@ body {
   left: 0;
   top: 0;
 }
+
+#order {
+  background-color: #444;
+  color: #fff;
+  border-radius: 12px;
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: 60px auto;
+}
+
+#orderForm input,
+#orderForm textarea {
+  background-color: #fff;
+  color: #000;
+}
+
+#formStatus {
+  font-size: 14px;
+  font-weight: bold;
+  color: #e30613;
+}
