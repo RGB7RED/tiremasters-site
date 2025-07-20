@@ -18,7 +18,7 @@ body {
   font-family: var(--font-main);
   color: #222;
   line-height: 1.6;
-  background-image: url('background.jpg');
+  background-image: none;
   background-size: 100% auto;
   background-position: center;
   background-attachment: fixed;
