@@ -883,22 +883,82 @@ body {
 }
 
 #order {
-  background-color: #444;
-  color: #fff;
-  border-radius: 12px;
-  padding: 40px 20px;
-  max-width: 600px;
+  background-color: #1d1d1d;
+  color: white;
+  padding: 60px 20px;
   margin: 60px auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  max-width: 900px;
+  text-align: center;
+}
+
+#order h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+#orderForm {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: start;
+  padding: 0 10px;
 }
 
 #orderForm input,
 #orderForm textarea {
-  background-color: #fff;
+  font-size: 18px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f8f8f8;
   color: #000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 100%;
+}
+
+#orderForm textarea {
+  min-height: 100px;
+  resize: vertical;
+  grid-column: span 2;
+}
+
+#orderForm button {
+  grid-column: span 2;
+  font-size: 18px;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 10px;
+  background-color: #e30613;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#orderForm button:hover {
+  background-color: #b80000;
 }
 
 #formStatus {
-  font-size: 14px;
+  grid-column: span 2;
+  margin-top: 10px;
+  font-size: 16px;
   font-weight: bold;
   color: #e30613;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  #orderForm {
+    grid-template-columns: 1fr;
+  }
+  #orderForm textarea,
+  #orderForm button,
+  #formStatus {
+    grid-column: span 1;
+  }
 }
