@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tiremasters.ru/sitemap.xml
