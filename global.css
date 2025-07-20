@@ -822,3 +822,32 @@ body {
     max-width: 300px;
   }
 }
+@media (max-width: 768px) {
+  .photo-block {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 16px;
+  }
+
+  .photo-block img {
+    flex: 0 0 auto;
+    width: 80%;
+    max-width: 300px;
+    scroll-snap-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .hero-btn,
+  .btn-primary {
+    width: 90%;
+    max-width: 320px;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    padding: 14px 20px;
+    white-space: normal;
+  }
+}
