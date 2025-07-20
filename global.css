@@ -23,6 +23,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-repeat: repeat;
+  overflow-x: hidden;
 }
 
 /* === ОБЁРТКА САЙТА === */
@@ -751,4 +752,27 @@ body {
   filter: brightness(0.8) ;
   transform: translateZ(0);
   will-change: background-position;
+}
+@media (max-width: 768px) {
+  .hero-gallery-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .hero-gallery-grid img,
+  .hero-center {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .hero-center {
+    min-width: 250px;
+    padding: 16px;
+  }
 }
