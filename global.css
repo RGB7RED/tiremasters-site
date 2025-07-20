@@ -981,27 +981,32 @@ body {
   }
 }
 
-.call-button {
-  display: inline-block;
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+.call-center {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
 }
 
-.call-button:hover {
-  background-color: #444;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+.call-center .btn-primary {
+  padding: 8px 16px;
+}
+
+.call-center .phone-number {
+  color: var(--main-color); /* красный */
+  font-weight: bold;
+  font-size: 16px;
 }
 
 @media (max-width: 768px) {
-  .call-button {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
+  .call-center {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .call-center .phone-number {
+    font-size: 14px;
   }
 }
