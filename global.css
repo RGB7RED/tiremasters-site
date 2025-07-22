@@ -1010,3 +1010,27 @@ body {
     font-size: 14px;
   }
 }
+#contacts {
+  background-color: #333333; /* Тёмно-серый фон */
+  padding: 40px 20px; /* Отступы */
+  border-radius: 12px; /* Закруглённые углы */
+  margin: 60px auto; /* Внешние отступы */
+}
+
+#contacts h2 {
+  color: #fff; /* Белый цвет текста */
+  text-align: center;
+}
+
+#contacts p {
+  color: #fff; /* Белый цвет текста */
+}
+
+#contacts a {
+  color: var(--main-color); /* Основной красный цвет для ссылок */
+  text-decoration: none;
+}
+
+#contacts a:hover {
+  text-decoration: underline; /* Подчёркивание при наведении */
+}
