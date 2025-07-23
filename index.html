@@ -66,34 +66,42 @@
 
 
 
-  <!-- ===== ШАПКА САЙТА ===== -->
- <header class="tm-header">
-  <div class="tm-header__container">
-
-    <!-- Слева: логотип -->
-    <div class="tm-header__logo">
-      <img src="logo.png" alt="Логотип TireMasters" />
-    </div>
-
-    <!-- Центр: Позвонить -->
-    <div class="call-center">
-      <a href="tel:+79500025502" class="btn-primary">Позвонить</a>
-      <span class="phone-number">+7 950 002-55-02</span>
-    </div>
-
-    <!-- Справа: Меню -->
-    <nav class="tm-header__nav">
-      <ul class="tm-header__menu">
-        <li><a href="#services">Услуги</a></li>
-        <li><a href="#about">О нас</a></li>
-        <li><a href="#contacts">Контакты</a></li>
-        <li><a href="#order" class="tm-header__button">Заказать</a></li>
-      </ul>
-      <div id="burger" class="tm-header__burger">☰</div>
-    </nav>
-
-  </div>
-</header>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiremasters</title>
+    <link rel="stylesheet" href="global.css">
+</head>
+<body>
+    <header class="tm-header">
+        <div class="tm-header__logo">
+            <img src="logo.png" alt="Tiremasters Logo">
+        </div>
+        <div class="tm-header__call">
+            <a href="tel:+123456789" class="tm-header__call-btn">Позвонить: +123456789</a>
+        </div>
+        <div id="burger" class="tm-header__burger">☰</div>
+        <nav class="tm-header__nav">
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        // Добавление логики для бургер-меню
+        const burger = document.getElementById('burger');
+        const nav = document.querySelector('.tm-header__nav');
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
 
 
 
