@@ -714,10 +714,6 @@ body {
   border-radius: 12px; /* Закругленные углы */
 }
 
-.photo-block img:hover {
-  transform: scale(1.3);
-}
-
 /* Базовые стили появления */
 .fade-in {
   opacity: 0;
@@ -1051,10 +1047,12 @@ body {
   }
 
   .photo-block img {
-    width: 90%; /* Занимает 90% ширины экрана */
-    max-width: 300px; /* Ограничение максимальной ширины фото */
-    height: auto; /* Сохранение пропорций изображения */
-    object-fit: cover; /* Изображение заполняет область */
-    border-radius: 12px; /* Закругленные углы */
-  }
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 280px; /* фиксированная ширина */
+  height: 200px; /* фиксированная высота */
+  object-fit: cover; /* обрезка лишнего */
+  border-radius: 12px;
 }
+}
+
