@@ -65,32 +65,37 @@
 <div class="parallax-bg"></div>
   
   
-            <<header class="tm-header">
-    <div class="tm-header__container">
-        <div class="tm-header__logo">
-<img src="logo.png" alt="Tiremasters Logo">
-        </div>
-        <div class="tm-header__call">
-            <a href="tel:+123456789" class="tm-header__call-btn">Позвонить: +123456789</a>
-        </div>
-        <div id="burger" class="tm-header__burger">☰</div>
-        <nav class="tm-header__nav">
-            <ul>
-                <li><a href="#home">Главная</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#contacts">Контакты</a></li>
-            </ul>
-        </nav>
-    </header>
-    <script>
-        // Добавление логики для бургер-меню
-        const burger = document.getElementById('burger');
-        const nav = document.querySelector('.tm-header__nav');
-        burger.addEventListener('click', () => {
-            nav.classList.toggle('active');
-        });
-    </script/
+            <header class="tm-header" id="home">
+  <div class="tm-header__container">
+    <a href="#home" class="tm-header__logo" aria-label="TireMasters — на главную">
+      <img src="logo.png" alt="TireMasters">
+    </a>
+
+    <nav class="tm-header__nav" id="mainNav" aria-label="Главное меню">
+      <ul class="tm-header__menu">
+        <li><a href="#home">Главная</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </nav>
+
+    <a href="tel:+123456789" class="tm-header__call-btn">Позвонить: +123456789</a>
+
+    <button id="burger" class="tm-header__burger" aria-label="Открыть меню" aria-controls="mainNav" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<script>
+  // Бургер-меню
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('mainNav');
+  burger.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('active');
+    burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+</script>
+
 
 
 <div class="hero-gallery-grid">
@@ -528,6 +533,7 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </section>
 </body>
 </html>
+
 
 
 
