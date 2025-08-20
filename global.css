@@ -1055,4 +1055,17 @@ body {
   border-radius: 12px;
 }
 }
+.photo-block {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* четыре равных фото */
+  gap: 10px; /* расстояние между фото */
+}
+
+.photo-block img {
+  width: 100%;
+  height: 220px;       /* фиксируем одинаковую высоту */
+  object-fit: cover;   /* картинка обрезается под рамку */
+  display: block;
+}
+
 
