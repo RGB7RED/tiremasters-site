@@ -608,21 +608,20 @@ body {
   padding: 40px 0;
   background-color: #333;
 }
+/* TM-MARK: ГЕРОЙ СЕТКА START */
 .hero-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, auto);
-  gap: 20px;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  row-gap: 24px;
   justify-items: center;
   align-items: center;
   padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
-  grid-template-areas:
-    "img1 img2 img3"
-    "img4 center img5"
-    "img6 img7 img8";
 }
+/* TM-MARK: ГЕРОЙ СЕТКА END */
+
 
 
 
@@ -1083,6 +1082,25 @@ body {
 html { scroll-behavior: smooth; }
 /* чтобы якорные блоки не прятались под липкой шапкой */
 [id] { scroll-margin-top: 90px; }
+
+/* TM-MARK: ФОТО ГЕРОЯ START */
+.photo-block--hero {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;                 /* как в нижних фотоблоках */
+  overflow: visible;         /* без горизонтального скролла */
+  margin: 0 auto;            /* центрирование */
+}
+
+.photo-block--hero img {
+  width: 100%;
+  height: 220px;             /* как у остальных фото на сайте */
+  object-fit: cover;         /* одинаковые карточки без «письма» */
+  border-radius: 12px;       /* скругление */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* тень как в других карточках */
+  display: block;
+}
+/* TM-MARK: ФОТО ГЕРОЯ END */
 
 
 
