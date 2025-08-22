@@ -640,9 +640,9 @@ body {
   z-index: 2;
 }
 
-/* Центральная ячейка с текстом */
+/* TM-MARK: СЕРЕДИНА ГЕРОЯ СТИЛИ START */
 .hero-center {
-  background-color: #444;
+  background-color: #333333; /* цвет как у блока "Наши услуги" */
   color: white;
   text-align: center;
   padding: 20px;
@@ -656,6 +656,8 @@ body {
   align-items: center;
   justify-content: center;
 }
+/* TM-MARK: СЕРЕДИНА ГЕРОЯ СТИЛИ END */
+
 
 
 
@@ -1169,6 +1171,7 @@ html { scroll-behavior: smooth; }
   }
 }
 /* TM-MARK: ФОТО ЦЕНТР 3 END */
+
 
 
 
