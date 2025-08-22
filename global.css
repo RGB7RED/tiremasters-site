@@ -1095,12 +1095,34 @@ html { scroll-behavior: smooth; }
 .photo-block--hero img {
   width: 100%;
   height: 220px;             /* как у остальных фото на сайте */
-  object-fit: cover;         /* одинаковые карточки без «письма» */
-  border-radius: 12px;       /* скругление */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* тень как в других карточках */
+  object-fit: cover;         /* на десктопе обрезаем под карточку */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   display: block;
 }
+
+/* Мобильный оверрайд: горизонтальный скролл и центрирование кадров */
+@media (max-width: 768px) {
+  .photo-block--hero {
+    display: flex;
+    gap: 16px;
+    padding: 0 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 50%;           /* чтобы первый/последний центрировались */
+    -webkit-overflow-scrolling: touch;    /* «пружинка» на iOS */
+  }
+  .photo-block--hero img {
+    flex: 0 0 auto;
+    height: 220px;        /* по вашему ТЗ — высота как сейчас */
+    width: auto;          /* ширина по пропорциям, не сплющиваем */
+    max-width: 90vw;      /* картинка помещается на экран */
+    object-fit: contain;  /* сохраняем соотношение сторон, без обрезки */
+    scroll-snap-align: center;
+  }
+}
 /* TM-MARK: ФОТО ГЕРОЯ END */
+
 
 
 /* TM-MARK: ФОТО ЦЕНТР 3 START */
@@ -1142,5 +1164,6 @@ html { scroll-behavior: smooth; }
   }
 }
 /* TM-MARK: ФОТО ЦЕНТР 3 END */
+
 
 
