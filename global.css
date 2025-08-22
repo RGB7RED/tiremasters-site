@@ -1084,18 +1084,18 @@ html { scroll-behavior: smooth; }
 [id] { scroll-margin-top: 90px; }
 
 /* TM-MARK: ФОТО ГЕРОЯ START */
-.photo-block--hero {
+.hero-gallery-grid .photo-block--hero {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;                 /* как в нижних фотоблоках */
-  overflow: visible;         /* без горизонтального скролла */
-  margin: 0 auto;            /* центрирование */
+  gap: 20px;
+  overflow: visible;
+  margin: 0 auto;
 }
 
-.photo-block--hero img {
+.hero-gallery-grid .photo-block--hero img {
   width: 100%;
-  height: 220px;             /* как у остальных фото на сайте */
-  object-fit: cover;         /* на десктопе обрезаем под карточку */
+  height: 220px;
+  object-fit: cover;   /* на десктопе аккуратная обрезка под карточку */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   display: block;
@@ -1103,25 +1103,30 @@ html { scroll-behavior: smooth; }
 
 /* Мобильный оверрайд: горизонтальный скролл и центрирование кадров */
 @media (max-width: 768px) {
-  .photo-block--hero {
-    display: flex;
+  /* 1) Делаем каждый ряд горизонтальной лентой и явно указываем направление */
+  .hero-gallery-grid .photo-block--hero {
+    display: flex !important;            /* перекрываем ранние правила .photo-block */
+    flex-direction: row !important;      /* исключаем column из общих правил */
     gap: 16px;
     padding: 0 16px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scroll-padding-inline: 50%;           /* чтобы первый/последний центрировались */
-    -webkit-overflow-scrolling: touch;    /* «пружинка» на iOS */
+    scroll-padding-inline: 50%;
+    -webkit-overflow-scrolling: touch;
   }
-  .photo-block--hero img {
+
+  /* 2) Отменяем глобальное правило ".hero-gallery-grid img { width:80% }" для фото в рядах */
+  .hero-gallery-grid .photo-block--hero img {
     flex: 0 0 auto;
-    height: 220px;        /* по вашему ТЗ — высота как сейчас */
-    width: auto;          /* ширина по пропорциям, не сплющиваем */
-    max-width: 90vw;      /* картинка помещается на экран */
-    object-fit: contain;  /* сохраняем соотношение сторон, без обрезки */
+    width: auto !important;              /* ширина по содержимому, сохраняем пропорции */
+    max-width: 90vw;                     /* влезает в экран */
+    height: 220px;                       /* фиксированная высота, как просили */
+    object-fit: contain;                 /* не обрезаем — одинаковая «высота», разная ширина */
     scroll-snap-align: center;
   }
 }
 /* TM-MARK: ФОТО ГЕРОЯ END */
+
 
 
 
@@ -1164,6 +1169,7 @@ html { scroll-behavior: smooth; }
   }
 }
 /* TM-MARK: ФОТО ЦЕНТР 3 END */
+
 
 
 
